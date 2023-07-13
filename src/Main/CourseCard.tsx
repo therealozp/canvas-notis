@@ -1,0 +1,54 @@
+import {
+	Box,
+	Grid,
+	Text,
+	Card,
+	CardBody,
+	CardHeader,
+	Heading,
+	Flex,
+	Divider,
+} from '@chakra-ui/react';
+
+interface CourseCardProps {
+	name: string;
+	courseID: string;
+	accessible: boolean;
+}
+
+const CourseCard = ({ name, courseID, accessible }: CourseCardProps) => {
+	return (
+		<Flex alignItems="center" justifyContent="center">
+			<Card
+				width="500px"
+				minHeight="300px"
+				padding="8px"
+				margin="16px"
+				border="1px solid #faf0f1"
+				bgColor="transparent"
+				color="#faf0f1"
+			>
+				<CardHeader>
+					<Heading size="xl">Course</Heading>
+				</CardHeader>
+				{/* <Divider width="80%" /> */}
+				<CardBody>
+					{accessible ? (
+						<Box>
+							<Text fontSize="xl">{name}</Text>
+							<Text>{courseID}</Text>
+						</Box>
+					) : (
+						<Box>
+							<Text>
+								Course of id <strong>{courseID}</strong> is restricted by date
+							</Text>
+						</Box>
+					)}
+				</CardBody>
+			</Card>
+		</Flex>
+	);
+};
+
+export default CourseCard;

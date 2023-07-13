@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Canvas Notification
 
-## Getting Started
+## Why is this a thing
 
-First, run the development server:
+Basically, I am quite baffled that Canvas does not have an option to notify students a couple of days in advance which assignments are due (which, I have missed many TRIVIAL assignments of uploading xxx or literally any other assignments that have a time different from 11:59 PM).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+So, as one of the projects in the Summer series, I have decided to create an app that will pull data from the official Canvas API, and notify me whatever assignments I have upcoming.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## But why this thing?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Well, I hope you don't find the two questions redundant but I would consider this a project that helps me get back to the swing of things with NextJS 13 update, which overhauls most of what I have been doing thus far. Also it is a fun way to test my knowledge of APIs and GraphQL stuff. Also it's fun. What are you gonna do.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+And yes, I will work on implementing OAuth when I get Canvas to verify that I am a completely legitimate (100%) developer with no ill intentions whatsoever. But until then, this is only available to me because it is against Canvas's ToS to tell users to find their own Auth Token and put it in. Which I heavily advise against anybody doing because there is always risk of compromise. Trust the people at Canvas, they know what they're doing way better than I do.
 
-## Learn More
+## Technologies
 
-To learn more about Next.js, take a look at the following resources:
+This website was made with **the latest and greatest NextJS 13**, **Chakra UI** cause it's fast, **Apollo Client and GraphQL**, and the **official Canvas LMS REST API** (which also has graphql, so idk why the misleading name). Check them out:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [NextJS](https://nextjs.org/)
+- [Chakra-UI](https://chakra-ui.com/)
+- [Apollo](https://www.apollographql.com/)
+- [GraphQL](https://graphql.org/)
+- [Canvas LMS API](https://canvas.instructure.com/doc/api/index.html)

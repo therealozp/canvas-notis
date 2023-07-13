@@ -1,3 +1,5 @@
+import CoursePage from '@/src/pages/CoursePage';
+
 const headers = {
 	Authorization: `Bearer ${process.env.AUTH_TOKEN}`,
 };
@@ -19,8 +21,7 @@ export default async function CoursesPage() {
 
 	return (
 		<>
-			<h1>Courses</h1>
-			{/* <p>{courses}</p> */}
+			<CoursePage courses={courses} />
 		</>
 	);
 }
