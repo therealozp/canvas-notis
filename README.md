@@ -8,7 +8,7 @@ So, as one of the projects in the Summer series, I have decided to create an app
 
 ## But why this thing?
 
-Well, I hope you don't find the two questions redundant but I would consider this a project that helps me get back to the swing of things with NextJS 13 update, which overhauls most of what I have been doing thus far. Also it is a fun way to test my knowledge of APIs and GraphQL stuff. Also it's fun. What are you gonna do.
+Well, I hope you don't find the two questions redundant, but I would consider this a project that helps me get back to the swing of things with NextJS 13 update, which overhauls most of what I have been doing thus far. Also it is a fun way to test my knowledge of APIs and GraphQL stuff. Also it's fun. What are you gonna do.
 
 And yes, I will work on implementing OAuth when I get Canvas to verify that I am a completely legitimate (100%) developer with no ill intentions whatsoever. But until then, this is only available to me because it is against Canvas's ToS to tell users to find their own Auth Token and put it in. Which I heavily advise against anybody doing because there is always risk of compromise. Trust the people at Canvas, they know what they're doing way better than I do.
 

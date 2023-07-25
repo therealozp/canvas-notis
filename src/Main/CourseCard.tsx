@@ -1,3 +1,5 @@
+// import { useRouter } from 'next/router';
+import Link from 'next/link';
 import {
 	Box,
 	Grid,
@@ -35,7 +37,16 @@ const CourseCard = ({ name, courseID, accessible }: CourseCardProps) => {
 				<CardBody>
 					{accessible ? (
 						<Box>
-							<Text fontSize="xl">{name}</Text>
+							<Link href={`/courses/${courseID}`} passHref>
+								<Text
+									fontSize="xl"
+									_hover={{
+										textDecoration: 'underline',
+									}}
+								>
+									{name}
+								</Text>
+							</Link>
 							<Text>{courseID}</Text>
 						</Box>
 					) : (

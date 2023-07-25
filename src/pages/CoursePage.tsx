@@ -7,6 +7,7 @@ interface CourseProps {
 	name: string;
 	id: any;
 	access_restricted_by_date: boolean;
+	end_at: Date;
 }
 
 interface CoursePageProps {
@@ -15,15 +16,21 @@ interface CoursePageProps {
 
 const CoursePage = ({ courses }: CoursePageProps) => {
 	let courseList = [...courses];
-	courseList.sort((a, b) => {
-		if (a.access_restricted_by_date && !b.access_restricted_by_date) {
-			return 1;
-		} else if (!a.access_restricted_by_date && b.access_restricted_by_date) {
-			return -1;
-		} else {
-			return 0;
-		}
+
+	courseList = courseList.filter((course) => {
+		const endDate = new Date(course?.end_at);
+		return endDate > new Date();
 	});
+
+	// courseList.sort((a, b) => {
+	// 	if (a.access_restricted_by_date && !b.access_restricted_by_date) {
+	// 		return 1;
+	// 	} else if (!a.access_restricted_by_date && b.access_restricted_by_date) {
+	// 		return -1;
+	// 	} else {
+	// 		return 0;
+	// 	}
+	// });
 	return (
 		<Grid gridTemplateColumns={'1fr 1fr'}>
 			{courseList.map((course: any, index: any) => {

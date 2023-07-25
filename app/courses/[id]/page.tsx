@@ -32,6 +32,7 @@ const assignmentspage = async ({ params }: { params: { id: string } }) => {
 	return (
 		<AssignmentsPage
 			assignments={resp.data.course.assignmentsConnection.nodes}
+			courseName={resp.data.course.name}
 		/>
 	);
 };
